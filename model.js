@@ -1,4 +1,5 @@
 const MONGO_URL = process.env.MONGOHQ_URL;
+
 var mongoose = require('mongoose');
 var db = mongoose.connect(MONGO_URL);
 
