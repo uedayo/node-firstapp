@@ -32,6 +32,7 @@ app.get('/users', user.list);
 app.get('/form', routes.form);
 app.post('/create', routes.create);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
